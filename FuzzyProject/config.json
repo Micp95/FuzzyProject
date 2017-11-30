@@ -1,0 +1,124 @@
+{
+  "Variables": [
+    {
+      "Type": 0,
+      "Name": "InputLeft",
+      "Range": {
+        "Min": 0,
+        "Max": 1
+      },
+      "sets": [
+        {
+          "Type": 0,
+          "Name": "Near",
+          "Values": [
+            0,
+            1
+          ]
+        },
+        {
+          "Type": 2,
+          "Name": "Far",
+          "Values": [
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "Type": 0,
+      "Name": "InputCenter",
+      "Range": {
+        "Min": 0,
+        "Max": 1
+      },
+      "sets": [
+        {
+          "Type": 0,
+          "Name": "Near",
+          "Values": [
+            0,
+            1
+          ]
+        },
+        {
+          "Type": 2,
+          "Name": "Far",
+          "Values": [
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "Type": 0,
+      "Name": "InputRight",
+      "Range": {
+        "Min": 0,
+        "Max": 1
+      },
+      "sets": [
+        {
+          "Type": 0,
+          "Name": "Near",
+          "Values": [
+            0,
+            1
+          ]
+        },
+        {
+          "Type": 2,
+          "Name": "Far",
+          "Values": [
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "Type": 1,
+      "Name": "Output",
+      "Range": {
+        "Min": -1,
+        "Max": 1
+      },
+      "sets": [
+        {
+          "Type": 0,
+          "Name": "Left",
+          "Values": [
+            -1,
+            0
+          ]
+        },
+        {
+          "Type": 1,
+          "Name": "Straight",
+          "Values": [
+            -1,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "Type": 2,
+          "Name": "Right",
+          "Values": [
+            0,
+            1
+          ]
+        }
+      ]
+    }
+  ],
+  "Regules": [
+	"IF InputCenter IS Far THEN Output IS Straight",
+	"IF InputCenter IS Near AND InputLeft IS Far AND InputRight IS Near THEN Output IS Left",
+	"IF InputCenter IS Near AND InputLeft IS Near AND InputRight IS Far THEN Output IS Right",
+	"IF InputCenter IS Near AND InputLeft IS Far AND InputRight IS Far THEN Output IS Right"
+  ]
+}
