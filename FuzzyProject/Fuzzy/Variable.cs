@@ -79,8 +79,8 @@ namespace FuzzyProject.Fuzzy
             _chartArea.AxisY.Maximum = 1;
             _chartArea.AxisY.Minimum = 0;
 
-            _chartArea.AxisX.LabelStyle.Format = "{0.0}";
-            _chartArea.AxisX.LabelStyle.Interval = 0.5;
+            _chartArea.AxisX.LabelStyle.Format = "{0}";
+            _chartArea.AxisX.LabelStyle.Interval = 2;
             _chartArea.AxisY.LabelStyle.Format = "{0.0}";
             _chartArea.AxisY.LabelStyle.Interval = 0.5;
 

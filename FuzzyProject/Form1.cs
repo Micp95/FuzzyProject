@@ -23,42 +23,6 @@ namespace FuzzyProject
         {
             InitializeComponent();
 
-            //FuzzyConfig config = new FuzzyConfig();
-            //config.Regules = new List<string>()
-            //{
-            //    "xd",
-            //    "more"
-            //};
-            //config.Variables = new List<VariableConfig>()
-            //{
-            //    new VariableConfig()
-            //    {
-            //        Name="name",
-            //        Range = new Range()
-            //        {
-            //            Min = 10,
-            //            Max = 100
-
-            //        },
-            //        Type = VariableType.Input,
-            //        sets = new List<SetConfig>()
-            //        {
-            //            new SetConfig()
-            //            {
-            //                Name="zmienna",
-            //                Type=SetType.TrapezoidalFunctionCenter,
-            //                Values=new List<float>()
-            //                {
-            //                    1,2,3
-            //                }
-            //            }
-            //        }
-            //    }
-
-            //};
-            //File.WriteAllText("config.json", JsonConvert.SerializeObject(config));
-
-
             InitializeModel();
         }
 

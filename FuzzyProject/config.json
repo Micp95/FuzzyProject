@@ -5,23 +5,27 @@
       "Name": "InputLeft",
       "Range": {
         "Min": 0,
-        "Max": 1
+        "Max": 10
       },
       "sets": [
         {
-          "Type": 0,
+          "Type": 1,
           "Name": "Near",
           "Values": [
             0,
-            1
+            0,
+			      2,
+			      4
           ]
         },
         {
-          "Type": 2,
+          "Type": 1,
           "Name": "Far",
           "Values": [
             0,
-            1
+            8,
+			      10,
+			      10
           ]
         }
       ]
@@ -31,23 +35,27 @@
       "Name": "InputCenter",
       "Range": {
         "Min": 0,
-        "Max": 1
+        "Max": 10
       },
       "sets": [
         {
-          "Type": 0,
+          "Type": 1,
           "Name": "Near",
           "Values": [
             0,
-            1
+            0,
+			      2,
+			      4
           ]
         },
         {
-          "Type": 2,
+          "Type": 1,
           "Name": "Far",
           "Values": [
             0,
-            1
+            8,
+			      10,
+			      10
           ]
         }
       ]
@@ -57,23 +65,27 @@
       "Name": "InputRight",
       "Range": {
         "Min": 0,
-        "Max": 1
+        "Max": 10
       },
       "sets": [
         {
-          "Type": 0,
+          "Type": 1,
           "Name": "Near",
           "Values": [
             0,
-            1
+            0,
+			      2,
+			      4
           ]
         },
         {
-          "Type": 2,
+          "Type": 1,
           "Name": "Far",
           "Values": [
             0,
-            1
+            8,
+			      10,
+			      10
           ]
         }
       ]
@@ -82,14 +94,26 @@
       "Type": 1,
       "Name": "Output",
       "Range": {
-        "Min": -1,
+        "Min": -2,
         "Max": 1
       },
       "sets": [
+         {
+          "Type": 1,
+          "Name": "STOP",
+          "Values": [
+            -2,
+            -2,
+            -1.5,
+            -1.5
+          ]
+        },
         {
-          "Type": 0,
+          "Type": 1,
           "Name": "Left",
           "Values": [
+            -1,
+            -1,
             -1,
             0
           ]
@@ -116,9 +140,10 @@
     }
   ],
   "Regules": [
-	"IF InputCenter IS Far THEN Output IS Straight",
-	"IF InputCenter IS Near AND InputLeft IS Far AND InputRight IS Near THEN Output IS Left",
-	"IF InputCenter IS Near AND InputLeft IS Near AND InputRight IS Far THEN Output IS Right",
-	"IF InputCenter IS Near AND InputLeft IS Far AND InputRight IS Far THEN Output IS Right"
+	  "IF InputCenter IS Far THEN Output IS Straight",
+	  "IF InputCenter IS Near AND InputLeft IS Far AND InputRight IS Near THEN Output IS Left",
+	  "IF InputCenter IS Near AND InputLeft IS Near AND InputRight IS Far THEN Output IS Right",
+    "IF InputCenter IS Near AND InputLeft IS Far AND InputRight IS Far THEN Output IS Right",
+	  "IF InputCenter IS Near AND InputLeft IS Near AND InputRight IS Near THEN Output IS STOP"
   ]
 }
